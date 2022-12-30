@@ -1,10 +1,23 @@
 
-.is-hidden
-{
-opacity: 0;
-pointer-events: none;
-visibility: 0;
-}
+  .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  
+    @include laptop {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  
+    & .mobile-menu {
+      transform: translateX(100%);
+    }
+  }
+  
+  .no-scroll {
+    overflow: hidden;
+  }
 .hide{
     -webkit-appearance: none;
     -moz-appearance: none;

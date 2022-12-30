@@ -1,59 +1,33 @@
-
-
-    
-    
-    
-
-    .color-section
-    {
-        // padding: 200px 0;
-
-        padding: 118px 0;
-
-
-        
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
-        ), 
-        url(../images/hero-bg-mob-2x.jpg);
-        
-        @media screen and (min-width: 1200px) {
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
-            ), 
-            url(../images/herodesc.jpg);
-            padding: 200px 0;
-max-width: 1600px;}
-        
-        margin: 0 auto;
-        @include mobile {
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
-            ), 
-            url(../images/hero-bg-mob-2х.jpg);
-        }
-        @include tablet {
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
-            ), 
-            url(../images/hero-bg-tab-2х.jpg);
-
-        }
-        }
-        .hero-container
-{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    @media screen and (min-width: 480px) {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;}
-        @media screen and (min-width: 768px) {
-            max-width: 768px;
-            padding-left: 15px;
-            padding-right: 15px;
+.hero {
+    text-align: center;
+&__title {
+    font-size: 24px;
+color: black;
+margin-bottom: 20px;
 
 }
-
+&__uptitle {
+    margin-bottom: 33px;
+}
+&__button {
+    color: 
+    #FFFFFF;
+background: #263238;
+border-radius: 5px;
+width: 100%;
+height: 60px;
+}
+&::before {
+    content: "";
+    display: flex;
+    flex-shrink: 0;
+    width: 299px;
+    height: 299px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/lear.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 }

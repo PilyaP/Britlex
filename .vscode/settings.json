@@ -13,5 +13,13 @@
     ],
     "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
     "liveSassCompile.settings.generateMap": true,
-    "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
+    "liveSassCompile.settings.autoprefix": [
+      "> 1%",
+      "last 2 versions"
+    ],
+    "editor.suggest.showStatusBar": true,
+    "debug.showSubSessionsInToolBar": true,
+    "problems.showCurrentInStatus": true,
+    "editor.scrollbar.scrollByPage": false,
+    "compile-hero.disable-compile-files-on-did-save-code": false
   }

@@ -1,274 +1,180 @@
+.logo {
+    font-weight: 400;
+font-size: 30px;
+line-height: 1.5;
 
-.header-page {
-	border-bottom: solid 1px $white-header;
-	&__wrap {
-		display: flex;
-		justify-content: space-between;
-	}
+
+
+color: #939393;
+}
+.logo-black {
+    color: #000000;
 }
 
-.nav {
-	display: flex;
-	align-items: center;
-	&__menu {
-		display: none;
-		@include tablet {
-			display: flex;
-			align-items: center;
-			gap: 50px;
-		}
-		&:hover,
-		&:focus {
-			color: $blue;
-	
-			outline: transparent;
-		}
-	}
-	
-	&__item {
-		flex-basis: calc((100% - 100px) / 3);
-	}
-	
-	&__link {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		padding-top: 32px;
-		padding-bottom: 32px;
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 1.14;
-		letter-spacing: 0.02em;
-		color: $main-color;
-		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	
-		&:hover,
-		&:focus {
-			color: $blue;
-	
-			outline: transparent;
-		}
-	
-		&--current {
-			color: $blue;
-			position: relative;
-	
-			&::after {
-				content: "";
-				position: absolute;
-				bottom: 0;
-				left: 0;
-	
-				width: 100%;
-				height: 4px;
-	
-				background-color: $blue;
-				border-radius: 2px;
-			}
-		}
-	}
-}
 
-.contacts {
-	display: none;
-
-	@include tablet {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 10px;
-
-		font-weight: 500;
-		font-size: 12px;
-		line-height: 1.17;
-		letter-spacing: 0.02em;
-	}
-	@include desktop {
-		flex-direction: row;
-		gap: 30px;
-
-		font-size: 14px;
-		line-height: 1.14;
-	}
-	&__item {
-		color: $gray;
-		@include desktop {
-			flex-basis: calc((100% - 30px) / 2);
-		}
-	}
-	&__link {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-	
-		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	
-		&:hover,
-		&:focus {
-			color: $blue;
-	
-			outline: transparent;
-		}
-	
-		@include tablet {
-			font-weight: 500;
-			font-size: 12px;
-			line-height: 1.17;
-			letter-spacing: 0.02em;
-		}
-	
-		@include desktop {
-			padding-top: 32px;
-			padding-bottom: 32px;
-	
-			font-size: 14px;
-			line-height: 1.14;
-		}
-	}
-	&__icon {
-		display: block;
-		fill: currentColor;
-	}
-}
-
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  
+    @include desktop {
+      padding-top: 55px;
+      padding-bottom: 55px;
+    }
+  }
+  
+  .header__menu {
+    @include laptop {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .header__mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    @include laptop {
+      margin-right: 167px;
+    }
+    @include desktop {
+      margin-right: 236px;
+    }
+  }
+//   menu
 .mobile-menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	width: 100%;
-	height: 100%;
-	padding-top: 48px;
-	padding-left: 40px;
-	padding-bottom: 48px;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    padding-top: 20px;
+  
+    background-color: inherit;
+  
+    transform: translateX(30%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+    @include mobileL {
+      transform: translateX(50%);
+    }
+  
+    @include tablet {
+      padding-left: 35px;
+      transform: translateX(60%);
+    }
+  
+    @include laptop {
+      position: static;
+      transform: translateX(0);
+      display: flex;
+      align-items: center;
+      padding-left: 0;
+      padding-top: 0;
+    }
+  }
+  
 
-	background-color: $white;
+  
+  .mobile-menu__button {
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/.svg);
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+  
+    @include laptop {
+      display: none;
+    }
+  }
+  
+  .mobile-menu__icon {
+    fill: currentColor;
+  }
 
-	transform: translateX(100%);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//   nav
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    
+    @include laptop {
+      flex-direction: row;
+      gap: 30px;
+      margin-bottom: 0;
+    }
+  
+    @include desktop {
+      gap: 50px;
+    }
+  }
+  
+  .nav__link {
+    position: relative;
+    color: $black;
+    font-weight: 500;
+    font-size: 20px;
+    &:hover,
+    &:focus {
+                color: greenyellow;
+        
+                outline: transparent;
+    &--current {
+        color: yellow;}
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        
+            width: 100%;
+            height: 4px;
+        
+            background-color: GrEEN;
+            border-radius: 2px;
+            
+            }
+            }
 
-	&.is-open {
-		transform: translateX(0);
-	}
-
-	@include tablet {
-		display: none;
-	}
-	&__container {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		overflow: auto;
-	}
-	
-	&__button {
-		position: absolute;
-		top: 10px;
-		right: 15px;
-		margin-left: auto;
-	
-		width: 40px;
-		height: 40px;
-		border: none;
-	
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	
-		background-color: transparent;
-	
-		&:hover,
-		&:focus {
-			color: $blue;
-	
-			outline: transparent;
-		}
-	
-		@include tablet {
-			display: none;
-		}
-	}
+    @include laptop {
+      font-size: 16px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  
+    @include desktop {
+      font-size: 20px;
+    }
 }
 
-
-
-.mobile-menu__icon {
-	fill: currentColor;
-}
-
-.mobile-nav__item,
-.mobile-contacts__item {
-	&:not(:last-child) {
-		margin-bottom: 32px;
-	}
-}
-.mobile-nav__link {
-	font-weight: 500;
-	font-size: 40px;
-	line-height: 1.175;
-	letter-spacing: 0.02em;
-
-	color: $main-color;
-
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-	&:hover,
-	&:focus {
-		color: $blue;
-
-		outline: transparent;
-	}
-
-	&--current {
-		color: $blue;
-	}
-}
-.mobile-contacts {
-	margin-bottom: 64px;
-	&__link {
-		color: $gray;
-		font-weight: 500;
-		font-size: 24px;
-		line-height: 1.17;
-		letter-spacing: 0.02em;
-		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-		&:hover,
-		&:focus {
-			font-size: 34px;
-			line-height: 1.18;
-			color: $blue;
-	
-			outline: transparent;
-		}
-	}
-}
-
-
-.mobile-soc {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
-	&__item {
-		@include toMobile {
-			flex-basis: calc((100% - 10px) / 2);
-		}
-	}
-	
-	&__link {
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 1.22;
-		letter-spacing: 0.02em;
-	
-		color: $blue;
-	}
-	&__item {
-		color: $gray;
-		&:hover,
-		&:focus {
-			color: $blue;
-		}
-	}
-}
-
+ 
+    .button-header {
+        margin-left: 0;
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 5px;
+        color: #000000;
+        background-color: transparent;
+        border: 2px solid $black;
+        @include mobileS {
+          width: 160px;
+        }
+      
+        @include laptop {
+          margin-left: auto;
+          margin-right: 0;
+        }
+      
+        @include desktop {
+          width: 312px;
+          height: 70px;
+          font-size: 20px;
+        }
+    }
