@@ -1,0 +1,41 @@
+// .skill{
+    
+// }
+.title-skill {
+    font-weight: 600;
+    font-size: 18px;
+ 
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.skills {
+    &__item {
+display: flex;
+gap: 20px;
+flex-direction: column;
+padding: 0 15px 32px;
+background: #F5F5F5;
+border-radius: 5px;
+    }
+    &__list{  display: flex;
+        flex-direction: column;
+        gap: 21px;}
+    &__title {
+
+        font-weight: 600;
+font-size: 18px;
+color: #263238;
+    }
+    &__uptitle {
+        font-size: 13px;
+    line-height: calc(20 / 13);
+    }
+    &__button {
+        width: 100%;
+        background: #263238;
+border-radius: 5px;
+color: #FFFFFF;
+height: 50px;
+    }
+}

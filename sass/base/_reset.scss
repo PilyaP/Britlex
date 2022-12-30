@@ -11,7 +11,7 @@ body{
 html {
     scroll-behavior: smooth;
   }
-  @import '~node_modules/modern-normalize/modern-normalize.css';
+  
   h1,
   h2,
   h3,
@@ -23,10 +23,10 @@ html {
     margin-bottom: 0;
   }
   
-  html {
-    min-height: 100%;
-    // overflow-y: auto;
-  }
+  // html {
+  //   // min-height: 100%;
+  //   // overflow-y: auto;
+  // }
   
   ul {
     margin: 0;
